@@ -5,8 +5,10 @@
 
 class CPU : public Player
 {
-public:
-    CPU();
+    public:
+        CPU();
+        void placeSymbol(void);
+        ~CPU();
 };
 
 #endif // CPU_H

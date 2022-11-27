@@ -4,3 +4,13 @@ CPU::CPU()
 {
 
 }
+
+void CPU::placeSymbol()
+{
+
+}
+
+CPU::~CPU()
+{
+
+}
