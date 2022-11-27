@@ -9,3 +9,8 @@ void LocalPlayer::placeSymbol()
 {
 
 }
+
+LocalPlayer::~LocalPlayer()
+{
+
+}
