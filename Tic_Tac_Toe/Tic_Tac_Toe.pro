@@ -9,6 +9,8 @@ CONFIG -= app_bundle
 
 SOURCES += \
         cpu.cpp \
+        game.cpp \
+        localplayer.cpp \
         main.cpp \
         player.cpp
 
@@ -19,4 +21,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     cpu.h \
+    game.h \
+    localplayer.h \
     player.h

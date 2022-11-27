@@ -8,15 +8,17 @@ using namespace std;
 class Player
 {
     public:
-        Player(std::string name) : name(name)   { std::cout << "Player: " << name << " created" << std::endl; }
-        virtual int getSymbol() = 0;
-        virtual int setSymbol() = 0;
-        ~Player()                               {};
+        Player();
+        void    setName(string nameInput)       { name = nameInput; }
+        string  getName(void)                   { return name; }
+        void    setSymbol(char symbolInput)     { symbol = symbolInput; }
+        char    getSymbol(void)                 { return symbol; }
+        virtual void placeSymbol(void) = 0;
+        ~Player();
 
     private:
-        std::string name;
+        string name;
         char symbol;
-        int symbol_status;
 };
 
 #endif // PLAYER_H
