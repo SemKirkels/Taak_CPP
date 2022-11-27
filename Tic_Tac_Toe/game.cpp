@@ -153,6 +153,27 @@ void Game::setSymbol_PvC()
     std::cout << "Symbol " << cpu.getName() << ": " << cpu.getSymbol() << std::endl;
 }
 
+int Game::checkWinP1()
+{
+    int winStatus = 0;
+
+    return winStatus;
+}
+
+int Game::checkWinP2()
+{
+    int winStatus = 0;
+
+    return winStatus;
+}
+
+int Game::checkWinCPU()
+{
+    int winStatus = 0;
+
+    return winStatus;
+}
+
 Game::~Game()
 {
     std::cout << "Game Ended!" << std::endl;
