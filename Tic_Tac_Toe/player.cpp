@@ -1,12 +1,14 @@
 #include "player.h"
 
-
-int Player::getSymbol()
+Player::Player()
 {
 
 }
+/*
+ * All other functions are inline declared in player.h
+ */
 
-int Player::setSymbol()
+Player::~Player()
 {
 
 }
