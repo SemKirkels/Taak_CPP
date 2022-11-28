@@ -55,11 +55,11 @@ void Game::setNames_PvP()
 
 void Game::setNames_PvC()
 {
-    string tempName;
+    string tempName; // Object Composition
 
     std::cout << "Player 1 set your name: ";
     std::cin >> tempName;
-    player_1.setName(tempName); // Encapsulation
+    player_1.setName(tempName);
 
     cpu.setName("CPU");
 
