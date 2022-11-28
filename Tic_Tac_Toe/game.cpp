@@ -43,14 +43,14 @@ void Game::setNames_PvP()
 
     std::cout << "Player 1 set your name: ";
     std::cin >> tempName;
-    player_1.setName(tempName);
+    player_1.setName(tempName); // Encapsulation
 
     std::cout << "Player 2 set your name: ";
     std::cin >> tempName;
-    player_2.setName(tempName);
+    player_2.setName(tempName); // Encapsulation
 
-    std::cout << "Name player 1: " << player_1.getName() << std::endl;
-    std::cout << "Name player 2: " << player_2.getName() << std::endl << std::endl;
+    std::cout << "Name player 1: " << player_1.getName() << std::endl;              // Encapsulation
+    std::cout << "Name player 2: " << player_2.getName() << std::endl << std::endl; // Encapsulation
 }
 
 void Game::setNames_PvC()
@@ -59,12 +59,12 @@ void Game::setNames_PvC()
 
     std::cout << "Player 1 set your name: ";
     std::cin >> tempName;
-    player_1.setName(tempName);
+    player_1.setName(tempName); // Encapsulation
 
     cpu.setName("CPU");
 
-    std::cout << "Name player 1: " << player_1.getName() << std::endl;
-    std::cout << "Name cpu: " << cpu.getName() << std::endl;
+    std::cout << "Name player 1: " << player_1.getName() << std::endl;  // Encapsulation
+    std::cout << "Name cpu: " << cpu.getName() << std::endl;            // Encapsulation
 }
 
 void Game::setSymbol_PvP()
@@ -78,8 +78,8 @@ void Game::setSymbol_PvP()
     {
         char tempSymbol;
 
-        std::cout << player_1.getName() << " starts"<< std::endl;
-        std::cout << player_1.getName() << " set your symbol [x / o]: ";
+        std::cout << player_1.getName() << " starts"<< std::endl;           // Encapsulation
+        std::cout << player_1.getName() << " set your symbol [x / o]: ";    // Encapsulation
         cin >> tempSymbol;
         player_1.setSymbol(tempSymbol);
 
@@ -170,7 +170,6 @@ int Game::checkWinP2()
 int Game::checkWinCPU()
 {
     int winStatus = 0;
-
     return winStatus;
 }
 

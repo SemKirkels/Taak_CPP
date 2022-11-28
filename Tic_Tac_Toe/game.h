@@ -23,8 +23,8 @@ class Game
         int checkWinCPU();
         ~Game();
     protected:
-        LocalPlayer player_1, player_2;
-        CPU cpu;
+        LocalPlayer player_1, player_2; // Object Composition
+        CPU cpu;                        // Object Composition
     private:
         int locations[3][3];
         //  locations[x][y]
