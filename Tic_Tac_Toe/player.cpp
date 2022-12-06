@@ -10,5 +10,5 @@ Player::Player()
 
 Player::~Player()
 {
-
+    std::cout << "Player removed from the game" << std::endl;
 }
