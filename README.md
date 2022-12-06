@@ -13,23 +13,23 @@
 # Aanvullend
 ## Algemeen
 
-- [ ]   clean main (i.e. nothing in the main that should be in a class)
-- [ ]   no globals, but statics if needed
+- [x]   clean main (i.e. nothing in the main that should be in a class)
+- [x]   no globals, but statics if needed
 - [ ]   correct protections
 - [ ]   maintainability by clean uniform code style and good function naming and/or comments everywhere
-- [ ]   separate header files
+- [x]   separate header files
 - [ ]   one complete project that compiles and does not crash
 - [ ]   fully working project
 - [ ]   sufficient git commits (+/- weekly)
-- [ ]   correct files on git
+- [x]   correct files on git
 - [ ]   working build manual as readme on GitHub (project must be possible to build from scratch on a clean PC)
 
 ## OOP
 
-- [ ]   at least 2 default constructors
+- [x]   at least 2 default constructors
 - [ ]   at least 2 parameterized constructors
 - [ ]   at least 2 copy constructors
-- [ ]   at least 2 destructors
+- [x]   at least 2 destructors
 - [ ]   member initialization in constructors (the stuff behind a colon)
 - [ ]   constructor forwarding
 - [ ]   useful proven (dynamic) polymorphism
@@ -60,7 +60,7 @@
 - [ ]   useful usage of lambda function
 - [ ]   useful usage of threads
 
-#Uitbreiding
+# Uitbreiding
 
 - [ ]   useful Qt class
 - [ ]   useful usage of signals/slots
