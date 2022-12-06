@@ -1,10 +1,16 @@
 #include "game.h"
 
-Game::Game()
+Game::Game() // Game constructor
 {
     std::cout << std::endl;
     std::cout << "Starting the game!" << std::endl << std::endl;
 }
+
+/*
+ * Function asks the user to select the gamemode
+ * @param gameMode: Saves the user input. Gamemode can be 1 -> PvP or 2 -> PvC. Program will exit(-1) when other
+ * @return gameMode: Gamemode is returned
+ */
 
 int Game::selectGameMode()
 {
@@ -41,6 +47,11 @@ int Game::selectGameMode()
     return gameMode;
 }
 
+/*
+ * Function asks the users for their player name and sets it depending on the player
+ * @param tempName: Saves the user input.
+ * @return: None
+ */
 void Game::setNames_PvP()
 {
     string tempName;

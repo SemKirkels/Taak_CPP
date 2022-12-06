@@ -27,7 +27,6 @@ class Game
         ~Game();
     protected:
         Player *player_1, *player_2; // Object Composition
-        //  locations[x][y]
 };
 
 /*

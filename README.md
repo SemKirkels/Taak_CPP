@@ -32,13 +32,13 @@
 - [x]   at least 2 destructors
 - [ ]   member initialization in constructors (the stuff behind a colon)
 - [ ]   constructor forwarding
-- [ ]   useful proven (dynamic) polymorphism
+- [x]   useful proven (dynamic) polymorphism
 - [ ]   useful usage of "this" (if the code does not work without it)
-- [ ]   useful member function
+- [x]   useful member function
 - [ ]   default values in function definition
-- [ ]   useful member variabel
-- [ ]   useful getters and setters for member variables
-- [ ]   correct usage of inline function
+- [x]   useful member variabel
+- [x]   useful getters and setters for member variables
+- [x]   correct usage of inline function
 - [ ]   useful template function or class
 - [ ]   useful friend function or class
 
@@ -49,7 +49,7 @@
 - [ ]   at least 4 useful const references for variables
 - [ ]   at least 4 useful const references for functions
 - [ ]   at least 4 useful bool
-- [ ]   dynamic memory allocation (new)
+- [x]   dynamic memory allocation (new)
 - [ ]   dynamic memory removing (delete)
 - [ ]   2 useful (modern) call-by-references
 - [ ]   useful string class usage
