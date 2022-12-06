@@ -17,14 +17,18 @@ int Game::selectGameMode()
         std::cout << "2. Player VS CPU" << std::endl;
         std::cin >> gameMode;
 
+        player_1 = new LocalPlayer();
+
         if(gameMode == 1)
         {
             std::cout << "You selected Player VS Player" << std::endl << std::endl;
+            player_2 = new LocalPlayer();
             break;
         }
         else if(gameMode == 2)
         {
             std::cout << "You selected Player VS CPU" << std::endl << std::endl;
+            player_2 = new CPU();
             break;
         }
         else
@@ -43,14 +47,14 @@ void Game::setNames_PvP()
 
     std::cout << "Player 1 set your name: ";
     std::cin >> tempName;
-    player_1.setName(tempName); // Encapsulation
+    player_1->setName(tempName); // Encapsulation
 
     std::cout << "Player 2 set your name: ";
     std::cin >> tempName;
-    player_2.setName(tempName); // Encapsulation
+    player_2->setName(tempName); // Encapsulation
 
-    std::cout << "Name player 1: " << player_1.getName() << std::endl;              // Encapsulation
-    std::cout << "Name player 2: " << player_2.getName() << std::endl << std::endl; // Encapsulation
+    std::cout << "Name player 1: " << player_1->getName() << std::endl;              // Encapsulation
+    std::cout << "Name player 2: " << player_2->getName() << std::endl << std::endl; // Encapsulation
 }
 
 void Game::setNames_PvC()
@@ -59,12 +63,12 @@ void Game::setNames_PvC()
 
     std::cout << "Player 1 set your name: ";
     std::cin >> tempName;
-    player_1.setName(tempName);
+    player_1->setName(tempName);
 
-    cpu.setName("CPU");
+    player_2->setName("CPU");
 
-    std::cout << "Name player 1: " << player_1.getName() << std::endl;  // Encapsulation
-    std::cout << "Name cpu: " << cpu.getName() << std::endl;            // Encapsulation
+    std::cout << "Name player 1: " << player_1->getName() << std::endl;  // Encapsulation
+    std::cout << "Name cpu: " << player_2->getName() << std::endl;            // Encapsulation
 }
 
 void Game::setSymbol_PvP()
@@ -78,18 +82,18 @@ void Game::setSymbol_PvP()
     {
         char tempSymbol;
 
-        std::cout << player_1.getName() << " starts"<< std::endl;           // Encapsulation
-        std::cout << player_1.getName() << " set your symbol [x / o]: ";    // Encapsulation
+        std::cout << player_1->getName() << " starts"<< std::endl;           // Encapsulation
+        std::cout << player_1->getName() << " set your symbol [x / o]: ";    // Encapsulation
         cin >> tempSymbol;
-        player_1.setSymbol(tempSymbol);
+        player_1->setSymbol(tempSymbol);
 
         if(tempSymbol == 'x')
         {
-            player_2.setSymbol('o');
+            player_2->setSymbol('o');
         }
         else if(tempSymbol == 'o')
         {
-            player_2.setSymbol('x');
+            player_2->setSymbol('x');
         }
         else
         {
@@ -102,18 +106,18 @@ void Game::setSymbol_PvP()
     {
         char tempSymbol;
 
-        std::cout << player_2.getName() << " starts"<< std::endl;
-        std::cout << player_2.getName() << " set your symbol [x / o]: ";
+        std::cout << player_2->getName() << " starts"<< std::endl;
+        std::cout << player_2->getName() << " set your symbol [x / o]: ";
         cin >> tempSymbol;
-        player_2.setSymbol(tempSymbol);
+        player_2->setSymbol(tempSymbol);
 
         if(tempSymbol == 'x')
         {
-            player_1.setSymbol('o');
+            player_1->setSymbol('o');
         }
         else if(tempSymbol == 'o')
         {
-            player_1.setSymbol('x');
+            player_1->setSymbol('x');
         }
         else
         {
@@ -123,25 +127,25 @@ void Game::setSymbol_PvP()
 
     }
 
-    std::cout << "Symbol " << player_1.getName() << ": " << player_1.getSymbol() << std::endl;
-    std::cout << "Symbol " << player_2.getName() << ": " << player_2.getSymbol() << std::endl;
+    std::cout << "Symbol " << player_1->getName() << ": " << player_1->getSymbol() << std::endl;
+    std::cout << "Symbol " << player_2->getName() << ": " << player_2->getSymbol() << std::endl;
 }
 
 void Game::setSymbol_PvC()
 {
     char tempSymbol;
 
-    std::cout << player_1.getName() << " set your symbol [x / o]: ";
+    std::cout << player_1->getName() << " set your symbol [x / o]: ";
     cin >> tempSymbol;
-    player_1.setSymbol(tempSymbol);
+    player_1->setSymbol(tempSymbol);
 
     if(tempSymbol == 'x')
     {
-        cpu.setSymbol('o');
+        player_2->setSymbol('o');
     }
     else if(tempSymbol == 'o')
     {
-        cpu.setSymbol('x');
+        player_2->setSymbol('x');
     }
     else
     {
@@ -149,17 +153,8 @@ void Game::setSymbol_PvC()
         exit(-1);
     }
 
-    std::cout << "Symbol " << player_1.getName() << ": " << player_1.getSymbol() << std::endl;
-    std::cout << "Symbol " << cpu.getName() << ": " << cpu.getSymbol() << std::endl;
-}
-
-void Game::printGrid()
-{
-    std::cout << "   " << "|" << "   " << "|" << "   " << std::endl;
-    std::cout << "---" << "|" << "---" << "|" << "---" << std::endl;
-    std::cout << "   " << "|" << "   " << "|" << "   " << std::endl;
-    std::cout << "---" << "|" << "---" << "|" << "---" << std::endl;
-    std::cout << "   " << "|" << "   " << "|" << "   " << std::endl;
+    std::cout << "Symbol " << player_1->getName() << ": " << player_1->getSymbol() << std::endl;
+    std::cout << "Symbol " << player_2->getName() << ": " << player_2->getSymbol() << std::endl;
 }
 
 int Game::checkWinP1()
@@ -180,6 +175,25 @@ int Game::checkWinCPU()
 {
     int winStatus = 0;
     return winStatus;
+}
+
+void Game::runGame()
+{
+    int gameMode = 0;
+
+    gameMode = selectGameMode();
+
+    if(gameMode == 1)
+    {
+        setNames_PvP();
+        setSymbol_PvP();
+    }
+
+    if(gameMode == 2)
+    {
+        setNames_PvC();
+        setSymbol_PvC();
+    }
 }
 
 Game::~Game()

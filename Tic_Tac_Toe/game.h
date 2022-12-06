@@ -5,6 +5,7 @@
 #include <string.h>
 #include "cpu.h"
 #include "localplayer.h"
+#include "field.h"
 #include <cstdlib>
 
 using namespace std;
@@ -18,16 +19,14 @@ class Game
         void setNames_PvC();
         void setSymbol_PvP();
         void setSymbol_PvC();
-        void printGrid();
+        void setLocations();
         int checkWinP1();
         int checkWinP2();
         int checkWinCPU();
+        void runGame();
         ~Game();
     protected:
-        LocalPlayer player_1, player_2; // Object Composition
-        CPU cpu;                        // Object Composition
-    private:
-        int locations[3][3];
+        Player *player_1, *player_2; // Object Composition
         //  locations[x][y]
 };
 
