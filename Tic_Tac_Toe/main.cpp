@@ -17,7 +17,6 @@ int main()
     {
         newGame.setNames_PvP();
         newGame.setSymbol_PvP();
-
     }
 
     if(gameMode == 2)
@@ -25,6 +24,8 @@ int main()
         newGame.setNames_PvC();
         newGame.setSymbol_PvC();
     }
+
+    newGame.printGrid();
 
     return 0;
 }

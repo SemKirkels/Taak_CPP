@@ -153,6 +153,15 @@ void Game::setSymbol_PvC()
     std::cout << "Symbol " << cpu.getName() << ": " << cpu.getSymbol() << std::endl;
 }
 
+void Game::printGrid()
+{
+    std::cout << "   " << "|" << "   " << "|" << "   " << std::endl;
+    std::cout << "---" << "|" << "---" << "|" << "---" << std::endl;
+    std::cout << "   " << "|" << "   " << "|" << "   " << std::endl;
+    std::cout << "---" << "|" << "---" << "|" << "---" << std::endl;
+    std::cout << "   " << "|" << "   " << "|" << "   " << std::endl;
+}
+
 int Game::checkWinP1()
 {
     int winStatus = 0;

@@ -18,6 +18,7 @@ class Game
         void setNames_PvC();
         void setSymbol_PvP();
         void setSymbol_PvC();
+        void printGrid();
         int checkWinP1();
         int checkWinP2();
         int checkWinCPU();
