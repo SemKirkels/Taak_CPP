@@ -190,6 +190,8 @@ int Game::checkWinCPU()
 
 void Game::runGame()
 {
+    Field field;
+
     int gameMode = 0;
 
     gameMode = selectGameMode();

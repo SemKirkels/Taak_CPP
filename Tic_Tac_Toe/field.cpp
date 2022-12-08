@@ -4,3 +4,13 @@ Field::Field()
 {
 
 }
+
+void Field::drawField()
+{
+
+}
+
+Field::~Field()
+{
+
+}
