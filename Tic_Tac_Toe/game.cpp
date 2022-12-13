@@ -226,6 +226,7 @@ void Game::runGame()
     srand(time(NULL));
 
     int gameMode = 0;
+    int moves = 0;
     int player_start = ((rand() % 2) + 1);
 
     gameMode = selectGameMode();
@@ -242,13 +243,14 @@ void Game::runGame()
         setSymbol_PvC();
     }
 
-    while(1)
+    while(moves < 9)
     {
         field.drawFieldOptions(); // Draw the field options
 
         if(player_start == 1)
         {
             turnPlayer_1();
+            moves++;
 
             field.drawField(); // Draw the field
 
@@ -258,7 +260,13 @@ void Game::runGame()
                 break;
             }
 
+            if(moves == 9)
+            {
+                break;
+            }
+
             turnPlayer_2();
+            moves++;
 
             field.drawField(); // Draw the field
 
@@ -272,6 +280,7 @@ void Game::runGame()
         if(player_start == 2)
         {
             turnPlayer_2();
+            moves++;
 
             field.drawField(); // Draw the field
 
@@ -281,7 +290,13 @@ void Game::runGame()
                 break;
             }
 
+            if(moves == 9)
+            {
+                break;
+            }
+
             turnPlayer_1();
+            moves++;
 
             field.drawField(); // Draw the field
 
@@ -291,6 +306,11 @@ void Game::runGame()
                 break;
             }
         }
+    }
+    if(field.checkWin(player_1, player_2) == 0)
+    {
+        field.drawField();
+        std::cout << "Draw" << std::endl;
     }
 }
 

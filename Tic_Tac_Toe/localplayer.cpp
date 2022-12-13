@@ -16,6 +16,8 @@ int LocalPlayer::placeSymbol()
         }
         else
         {
+            std::cin.clear();
+            std::cin.ignore(1);
             std::cout << "Invalid Input" << std::endl;
         }
     }
