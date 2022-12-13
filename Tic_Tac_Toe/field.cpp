@@ -13,6 +13,7 @@ void Field::drawFieldOptions()
     std::cout << '4' << "|" << '5' << "|" << '6' << std::endl;
     std::cout << "-|-|-" << std::endl;
     std::cout << '7' << "|" << '8' << "|" << '9' << std::endl;
+    std::cout << std::endl;
 }
 
 void Field::drawField()

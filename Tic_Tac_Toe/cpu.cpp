@@ -7,6 +7,8 @@ CPU::CPU()
 
 int CPU::placeSymbol()
 {
+    srand(time(NULL));
+    location = (rand() % 9);
 
     return location;
 }
