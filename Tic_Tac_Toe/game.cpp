@@ -11,7 +11,6 @@ Game::Game() // Game constructor
  * @param gameMode: Saves the user input. Gamemode can be 1 -> PvP or 2 -> PvC. Program will exit(-1) when other
  * @return gameMode: Gamemode is returned
  */
-
 int Game::selectGameMode()
 {
     int gameMode = 0;
@@ -111,7 +110,6 @@ void Game::setSymbol_PvP()
             std::cout << "Invalid input!" << std::endl;
             exit(-1);
         }
-
     }
     else
     {
@@ -135,7 +133,6 @@ void Game::setSymbol_PvP()
             std::cout << "Invalid input!" << std::endl;
             exit(-1);
         }
-
     }
 
     std::cout << "Symbol " << player_1->getName() << ": " << player_1->getSymbol() << std::endl;
@@ -206,6 +203,31 @@ void Game::runGame()
     {
         setNames_PvC();
         setSymbol_PvC();
+    }
+
+    field.drawFieldOptions();
+
+    while(1)
+    {
+        std::cout << player_1->getName() << " Place your symbol: ";
+        field.setSymbols(player_1->placeSymbol() - 1, player_1);
+        field.drawField();
+
+        if(field.checkWin(player_1, player_2) == 1)
+        {
+            std::cout << player_1->getName() << " Wins!" << std::endl;
+            break;
+        }
+
+        std::cout << player_2->getName() << " Place your symbol: ";
+        field.setSymbols(player_2->placeSymbol() - 1, player_2);
+        field.drawField();
+
+        if(field.checkWin(player_1, player_2) == 2)
+        {
+            std::cout << player_2->getName() << " Wins!" << std::endl;
+            break;
+        }
     }
 }
 

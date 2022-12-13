@@ -7,8 +7,10 @@ class CPU : public Player
 {
     public:
         CPU();
-        void placeSymbol(void);
+        int placeSymbol(void);
         ~CPU();
+    protected:
+        int location;
 };
 
 #endif // CPU_H

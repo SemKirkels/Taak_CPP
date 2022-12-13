@@ -2,15 +2,17 @@
 
 LocalPlayer::LocalPlayer()
 {
-    std::cout << "Local player Added to the game" << std::endl;
+
 }
 
-void LocalPlayer::placeSymbol()
+int LocalPlayer::placeSymbol()
 {
+    cin >> location;
 
+    return location;
 }
 
 LocalPlayer::~LocalPlayer()
 {
-    std::cout << "Local player Removed from the game" << std::endl;
+
 }
