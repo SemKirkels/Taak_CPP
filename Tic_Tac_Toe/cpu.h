@@ -1,8 +1,8 @@
 #ifndef CPU_H
 #define CPU_H
 
-
 #include "player.h"
+#include <cstdlib>
 
 class CPU : public Player
 {

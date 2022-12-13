@@ -180,16 +180,53 @@ void Game::setSymbol_PvC()
     std::cout << "Symbol " << player_2->getName() << ": " << player_2->getSymbol() << std::endl;
 }
 
+void Game::turnPlayer_1()
+{
+    while(1) // Player_1 turn
+    {
+        int temp;
+
+        std::cout << player_1->getName() << " Place your symbol: ";
+        temp = player_1->placeSymbol() - 1;
+
+        if(field.getSymbols(temp) == ' ')
+        {
+           field.setSymbols(temp, player_1);
+           break;
+        }
+    }
+}
+
+void Game::turnPlayer_2()
+{
+    while(1) // Player_2 turn
+    {
+        int temp;
+
+        std::cout << player_2->getName() << " Place your symbol: ";
+
+        temp = player_2->placeSymbol() - 1;
+        if(field.getSymbols(temp) == ' ')
+        {
+           field.setSymbols(temp, player_2);
+           break;
+        }
+    }
+}
+
 /*
  * Function runs the game and calls each function depending on the game phase.
  * @param field: This object encapsulates all paramiters of the field.
  * @param gameMode: stores the game mode (1 PvP or 2 PvC)
+ * @param player_start: can be 1 or 2 and determens the starting player
  * @return: None
  */
 void Game::runGame()
 {
-    Field field;
+    srand(time(NULL));
+
     int gameMode = 0;
+    int player_start = ((rand() % 2) + 1);
 
     gameMode = selectGameMode();
 
@@ -209,42 +246,50 @@ void Game::runGame()
     {
         field.drawFieldOptions(); // Draw the field options
 
-        while(1) // Player_1 turn
+        if(player_start == 1)
         {
-            int temp;
-            std::cout << player_1->getName() << " Place your symbol: ";
-            temp = player_1->placeSymbol() - 1;
-            if(field.getSymbols(temp) == ' ')
+            turnPlayer_1();
+
+            field.drawField(); // Draw the field
+
+            if(field.checkWin(player_1, player_2) == 1) // Check for win
             {
-               field.setSymbols(temp, player_1);
-               break;
+                std::cout << player_1->getName() << " Wins!" << std::endl;
+                break;
+            }
+
+            turnPlayer_2();
+
+            field.drawField(); // Draw the field
+
+            if(field.checkWin(player_1, player_2) == 2) // Check for win
+            {
+                std::cout << player_2->getName() << " Wins!" << std::endl;
+                break;
             }
         }
-        field.drawField(); // Draw the field
 
-        if(field.checkWin(player_1, player_2) == 1) // Check for win
+        if(player_start == 2)
         {
-            std::cout << player_1->getName() << " Wins!" << std::endl;
-            break;
-        }
+            turnPlayer_2();
 
-        while(1) // Player_2 turn
-        {
-            int temp;
-            std::cout << player_2->getName() << " Place your symbol: ";
-            temp = player_2->placeSymbol() - 1;
-            if(field.getSymbols(temp) == ' ')
+            field.drawField(); // Draw the field
+
+            if(field.checkWin(player_1, player_2) == 1) // Check for win
             {
-               field.setSymbols(temp, player_2);
-               break;
+                std::cout << player_1->getName() << " Wins!" << std::endl;
+                break;
             }
-        }
-        field.drawField(); // Draw the field
 
-        if(field.checkWin(player_1, player_2) == 2) // Check for win
-        {
-            std::cout << player_2->getName() << " Wins!" << std::endl;
-            break;
+            turnPlayer_1();
+
+            field.drawField(); // Draw the field
+
+            if(field.checkWin(player_1, player_2) == 2) // Check for win
+            {
+                std::cout << player_2->getName() << " Wins!" << std::endl;
+                break;
+            }
         }
     }
 }
