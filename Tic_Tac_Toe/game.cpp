@@ -33,7 +33,7 @@ int Game::selectGameMode()
         else if(gameMode == 2)
         {
             std::cout << "You selected Player VS CPU" << std::endl << std::endl;
-            player_2 = new CPU();
+            player_2 = new CPU(&field);
             break;
         }
         else
@@ -243,10 +243,10 @@ void Game::runGame()
         setSymbol_PvC();
     }
 
+    field.drawFieldOptions(); // Draw the field options
+
     while(moves < 9)
     {
-        field.drawFieldOptions(); // Draw the field options
-
         if(player_start == 1)
         {
             turnPlayer_1();
@@ -307,9 +307,9 @@ void Game::runGame()
             }
         }
     }
+
     if(field.checkWin(player_1, player_2) == 0)
     {
-        field.drawField();
         std::cout << "Draw" << std::endl;
     }
 }

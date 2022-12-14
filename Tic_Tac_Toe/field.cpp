@@ -33,12 +33,12 @@ int Field::checkWin(Player *player_1, Player *player_2)
     {
         if(player_1->getSymbol() == symbols[i] && player_1->getSymbol() == symbols[i + 1] && player_1->getSymbol() == symbols[i + 2])
         {
-            status = 1;
+            win_player_1 = true;
         }
 
         if(player_2->getSymbol() == symbols[i] && player_2->getSymbol() == symbols[i + 1] && player_2->getSymbol() == symbols[i + 2])
         {
-            status = 2;
+            win_player_2 = true;
         }
     }
 
@@ -47,49 +47,49 @@ int Field::checkWin(Player *player_1, Player *player_2)
     {
         if(player_1->getSymbol() == symbols[i] && player_1->getSymbol() == symbols[i + 3] && player_1->getSymbol() == symbols[i + 6])
         {
-            status = 1;
+            win_player_1 = true;
         }
 
         if(player_2->getSymbol() == symbols[i] && player_2->getSymbol() == symbols[i + 3] && player_2->getSymbol() == symbols[i + 6])
         {
-            status = 2;
+            win_player_2 = true;
         }
     }
 
     // Check Diagonal
-    for(int i = 0; i < 3; i += 2)
+    if(player_1->getSymbol() == symbols[0] && player_1->getSymbol() == symbols[4] && player_1->getSymbol() == symbols[8]) // Diagonal 1 Player 1
     {
-        if(i == 0) // Diagonal 1
-        {
-            if(player_1->getSymbol() == symbols[i] && player_1->getSymbol() == symbols[i + 4] && player_1->getSymbol() == symbols[i + 8])
-            {
-                status = 1;
-            }
-
-            if(player_2->getSymbol() == symbols[i] && player_2->getSymbol() == symbols[i + 4] && player_2->getSymbol() == symbols[i + 8])
-            {
-                status = 2;
-            }
-        }
-        else if(i == 2) // Diagonal 2
-        {
-            if(player_1->getSymbol() == symbols[i] && player_1->getSymbol() == symbols[i + 2] && player_1->getSymbol() == symbols[i + 4])
-            {
-                status = 1;
-            }
-
-            if(player_2->getSymbol() == symbols[i] && player_2->getSymbol() == symbols[i + 2] && player_2->getSymbol() == symbols[i + 4])
-            {
-                status = 2;
-            }
-        }
-        else
-        {
-            std::cout << "Error!" << std::endl;
-        }
+        win_player_1 = true;
     }
 
-    return status;
+    if(player_2->getSymbol() == symbols[0] && player_2->getSymbol() == symbols[4] && player_2->getSymbol() == symbols[8]) // Diagonal 1 Player 2
+    {
+        win_player_2 = true;
+    }
+
+    if(player_1->getSymbol() == symbols[6] && player_1->getSymbol() == symbols[4] && player_1->getSymbol() == symbols[2]) // Diagonal 2 Player 1
+    {
+        win_player_1 = true;
+    }
+
+    if(player_2->getSymbol() == symbols[6] && player_2->getSymbol() == symbols[4] && player_2->getSymbol() == symbols[2]) // Diagonal 2 Player 2
+    {
+        win_player_2 = true;
+    }
+
+    // Check win if and which player has won
+    if(win_player_1 == true && win_player_2 == false)
+    {
+        return 1;
+    }
+    else if(win_player_2 == true && win_player_2 == false)
+    {
+        return 2;
+    }
+    else
+    {
+        return 0;
+    }
 }
 
 Field::~Field()

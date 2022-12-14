@@ -15,12 +15,11 @@ class Field
         char getSymbols(int position)                           { return symbols[position]; }
         void setSymbols(int position, Player *playerObject)     { symbols[position] = playerObject->getSymbol(); }
         int checkWin(Player *player_1, Player *player_2);
-        int getStatus()                                         { return status; }
-        void setStatus(int input)                               { status = input; }
         ~Field();
     protected:
         char symbols[9] = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
-        int status = 0;
+        bool win_player_1 = false;
+        bool win_player_2 = false;
 };
 
 #endif // FIELD_H

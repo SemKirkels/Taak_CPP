@@ -15,8 +15,7 @@ class Player
         char    getSymbol(void)                 { return symbol; }          // Getter
         virtual int placeSymbol(void) = 0;     // Virtual Function
         ~Player();
-
-    private:
+    protected:
         string name;
         char symbol;
 };

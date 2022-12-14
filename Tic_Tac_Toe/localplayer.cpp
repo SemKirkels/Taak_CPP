@@ -7,6 +7,8 @@ LocalPlayer::LocalPlayer()
 
 int LocalPlayer::placeSymbol()
 {
+    int location;
+
     while(1)
     {
         cin >> location;

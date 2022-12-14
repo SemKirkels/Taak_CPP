@@ -9,8 +9,6 @@ class LocalPlayer : public Player
         LocalPlayer();
         int placeSymbol(void);
         ~LocalPlayer();
-    protected:
-        int location;
 };
 
 #endif // LOCALPLAYER_H
