@@ -15,12 +15,12 @@
 
 - [x]   clean main (i.e. nothing in the main that should be in a class)
 - [x]   no globals, but statics if needed
-- [ ]   correct protections
-- [ ]   maintainability by clean uniform code style and good function naming and/or comments everywhere
+- [x]   correct protections
+- [x]   maintainability by clean uniform code style and good function naming and/or comments everywhere
 - [x]   separate header files
-- [ ]   one complete project that compiles and does not crash
-- [ ]   fully working project
-- [ ]   sufficient git commits (+/- weekly)
+- [x]   one complete project that compiles and does not crash
+- [x]   fully working project
+- [x]   sufficient git commits (+/- weekly)
 - [x]   correct files on git
 - [ ]   working build manual as readme on GitHub (project must be possible to build from scratch on a clean PC)
 
@@ -30,7 +30,7 @@
 - [ ]   at least 2 parameterized constructors
 - [ ]   at least 2 copy constructors
 - [x]   at least 2 destructors
-- [ ]   member initialization in constructors (the stuff behind a colon)
+- [x]   member initialization in constructors (the stuff behind a colon)
 - [ ]   constructor forwarding
 - [x]   useful proven (dynamic) polymorphism
 - [ ]   useful usage of "this" (if the code does not work without it)

@@ -284,9 +284,9 @@ void Game::runGame()
 
             field.drawField(); // Draw the field
 
-            if(field.checkWin(player_1, player_2) == 1) // Check for win
+            if(field.checkWin(player_1, player_2) == 2) // Check for win
             {
-                std::cout << player_1->getName() << " Wins!" << std::endl;
+                std::cout << player_2->getName() << " Wins!" << std::endl;
                 break;
             }
 
@@ -300,9 +300,9 @@ void Game::runGame()
 
             field.drawField(); // Draw the field
 
-            if(field.checkWin(player_1, player_2) == 2) // Check for win
+            if(field.checkWin(player_1, player_2) == 1) // Check for win
             {
-                std::cout << player_2->getName() << " Wins!" << std::endl;
+                std::cout << player_1->getName() << " Wins!" << std::endl;
                 break;
             }
         }
