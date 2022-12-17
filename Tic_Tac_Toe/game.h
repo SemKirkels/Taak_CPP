@@ -10,22 +10,25 @@
 
 using namespace std;
 
-class Game
+namespace TicTacToeSemKirkels
 {
-    public:
-        Game();
-        int selectGameMode();       // Asks the player if they wish to play vs cpu of vs another player
-        void setNames_PvP();        // Asks and sets the name for the players in PvP
-        void setNames_PvC();        // Asks and sets the name in PvC
-        void setSymbol_PvP();       // Asks and sets the symbols for each player in PvP
-        void setSymbol_PvC();       // Asks and sets the symbol for the player in PvC
-        void turnPlayer_1();
-        void turnPlayer_2();
-        void runGame();             // Runs the game and calls each function
-        ~Game();
-    protected:
-        Player *player_1, *player_2; // Object Composition
-        Field field;
-};
+    class Game
+    {
+        public:
+            Game();
+            int selectGameMode();       // Asks the player if they wish to play vs cpu of vs another player
+            void setNames_PvP();        // Asks and sets the name for the players in PvP
+            void setNames_PvC();        // Asks and sets the name in PvC
+            void setSymbol_PvP();       // Asks and sets the symbols for each player in PvP
+            void setSymbol_PvC();       // Asks and sets the symbol for the player in PvC
+            void turnPlayer_1();
+            void turnPlayer_2();
+            void runGame();             // Runs the game and calls each function
+            ~Game();
+        protected:
+            Player *player_1, *player_2; // Object Composition
+            Field field;
+    };
+}
 
 #endif // GAME_H

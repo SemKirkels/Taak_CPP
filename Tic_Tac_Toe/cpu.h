@@ -5,17 +5,17 @@
 #include "field.h"
 #include <cstdlib>
 
-class CPU : public Player
+class CPU : public TicTacToeSemKirkels::Player
 {
     public:
-        CPU(Field *field);
+    CPU(TicTacToeSemKirkels::Field *field);
         int placeSymbol();
         void checkField();
         void checkStartingPlayer();
         ~CPU();
     protected:
         char grid[9];
-        Field *field;
+        TicTacToeSemKirkels::Field *field;
     private:
         int turn = 0;
         bool player_start = false;

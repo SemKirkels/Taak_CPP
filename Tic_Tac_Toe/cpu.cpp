@@ -1,6 +1,6 @@
 #include "cpu.h"
 
-CPU::CPU(Field *field) : field(field)
+CPU::CPU(TicTacToeSemKirkels::Field *field) : field(field)
 {
 
 }

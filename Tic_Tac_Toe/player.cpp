@@ -1,15 +1,18 @@
 #include "player.h"
 
-Player::Player()
+namespace TicTacToeSemKirkels
 {
+    Player::Player()
+    {
 
-}
+    }
 
-/*
- * All other functions are inline declared in player.h
- */
+    /*
+    * All other functions are inline declared in player.h
+    */
 
-Player::~Player()
-{
+    Player::~Player()
+    {
 
+    }
 }

@@ -2,7 +2,7 @@
 
 int main()
 {
-    Game newGame;
+    TicTacToeSemKirkels::Game newGame;
 
     newGame.runGame();
 

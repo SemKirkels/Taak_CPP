@@ -1,31 +1,34 @@
 #include "localplayer.h"
 
-LocalPlayer::LocalPlayer()
+namespace TicTacToeSemKirkels
 {
-
-}
-
-int LocalPlayer::placeSymbol()
-{
-    int location;
-
-    while(1)
+    LocalPlayer::LocalPlayer()
     {
-        cin >> location;
-        if(location > 0 && location < 10)
+
+    }
+
+    int LocalPlayer::placeSymbol()
+    {
+        int location;
+
+        while(1)
         {
-            return location;
-        }
-        else
-        {
-            std::cin.clear();
-            std::cin.ignore(1);
-            std::cout << "Invalid Input" << std::endl;
+            cin >> location;
+            if(location > 0 && location < 10)
+            {
+                return location;
+            }
+            else
+            {
+                std::cin.clear();
+                std::cin.ignore(1);
+                std::cout << "Invalid Input" << std::endl;
+            }
         }
     }
-}
 
-LocalPlayer::~LocalPlayer()
-{
+    LocalPlayer::~LocalPlayer()
+    {
 
+    }
 }

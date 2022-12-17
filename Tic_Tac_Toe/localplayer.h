@@ -3,12 +3,15 @@
 
 #include "player.h"
 
-class LocalPlayer : public Player
+namespace TicTacToeSemKirkels
 {
-    public:
-        LocalPlayer();
-        int placeSymbol(void);
-        ~LocalPlayer();
-};
+    class LocalPlayer : public Player
+    {
+        public:
+            LocalPlayer();
+            int placeSymbol(void);
+            ~LocalPlayer();
+    };
+}
 
 #endif // LOCALPLAYER_H
