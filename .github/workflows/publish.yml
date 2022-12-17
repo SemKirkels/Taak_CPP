@@ -38,6 +38,4 @@ jobs:
           push: true
           tags: |
             semkirkels/taak_cpp:latest
-            semkirkels/taak_cpp:1.0.0
             ghcr.io/semkirkels/taak_cpp:latest
-            ghcr.io/semkirkels/taak_cpp:1.0.0
