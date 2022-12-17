@@ -50,7 +50,7 @@
 - [ ]   at least 4 useful const references for functions
 - [ ]   at least 4 useful bool
 - [x]   dynamic memory allocation (new)
-- [ ]   dynamic memory removing (delete)
+- [x]   dynamic memory removing (delete)
 - [ ]   2 useful (modern) call-by-references
 - [ ]   useful string class usage
 - [ ]   useful container class

@@ -11,12 +11,14 @@ class CPU : public Player
         CPU(Field *field);
         int placeSymbol();
         void checkField();
+        void checkStartingPlayer();
         ~CPU();
     protected:
         char grid[9];
         Field *field;
     private:
         int turn = 0;
+        bool player_start = false;
 };
 
 #endif // CPU_H

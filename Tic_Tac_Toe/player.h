@@ -14,7 +14,7 @@ class Player
         void    setSymbol(char symbolInput)     { symbol = symbolInput; }   // Setter
         char    getSymbol(void)                 { return symbol; }          // Getter
         virtual int placeSymbol(void) = 0;     // Virtual Function
-        ~Player();
+        virtual ~Player();
     protected:
         string name;
         char symbol;

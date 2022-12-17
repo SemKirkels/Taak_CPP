@@ -312,6 +312,9 @@ void Game::runGame()
     {
         std::cout << "Draw" << std::endl;
     }
+
+    delete player_1;
+    delete player_2;
 }
 
 Game::~Game()
