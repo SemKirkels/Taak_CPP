@@ -44,7 +44,7 @@
 
 ## C++
 
-- [ ]   everything in one or more self-made namespace(s)
+- [x]   everything in one or more self-made namespace(s)
 - [ ]   2 useful unsigned chars or other better usage of memory efficient type
 - [ ]   at least 4 useful const references for variables
 - [ ]   at least 4 useful const references for functions
