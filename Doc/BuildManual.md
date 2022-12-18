@@ -91,7 +91,7 @@ Move to the folder /Run_Scripts/Windows and double click the "Docker_Pull_and_Ru
 
 ### Linux
 Move to the folder /Run_Scripts/Linux and execute the following command:  
-``` chmod +x Docker_Pull_and_Run.sh ```
+``` chmod +x Docker_Pull_and_Run.sh ```  
 When that is finished execute the "Docker_Pull_and_Run.sh" file using the following command:  
 ``` ./Docker_Pull_and_Run.sh ```  
 This will pull and run the docker container.
