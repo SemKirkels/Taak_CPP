@@ -2,11 +2,19 @@
 
 namespace TicTacToeSemKirkels
 {
+    /*
+     * LocalPlayer Constructor
+     */
     LocalPlayer::LocalPlayer()
     {
 
     }
 
+    /*
+     * This function asks for user input and returns the value of the user so that it can be placed on the field.
+     * @param location: The user input is saved in this variable it contains the location on the grid where the player symbol must be placed.
+     * @return location: Returns the location on the field where the symbol must be placed.
+     */
     int LocalPlayer::placeSymbol()
     {
         int location;
@@ -27,6 +35,9 @@ namespace TicTacToeSemKirkels
         }
     }
 
+    /*
+    * LocalPlayer Destructor
+    */
     LocalPlayer::~LocalPlayer()
     {
 

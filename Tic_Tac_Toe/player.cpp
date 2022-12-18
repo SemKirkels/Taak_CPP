@@ -2,6 +2,9 @@
 
 namespace TicTacToeSemKirkels
 {
+    /*
+     * Player constructor
+     */
     Player::Player()
     {
 
@@ -11,6 +14,9 @@ namespace TicTacToeSemKirkels
     * All other functions are inline declared in player.h
     */
 
+    /*
+     * Player destructor
+     */
     Player::~Player()
     {
 

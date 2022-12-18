@@ -181,7 +181,11 @@ namespace TicTacToeSemKirkels
         std::cout << "Symbol " << player_1->getName() << ": " << player_1->getSymbol() << std::endl;
         std::cout << "Symbol " << player_2->getName() << ": " << player_2->getSymbol() << std::endl;
     }
-    
+
+    /*
+     * This function calls the logic for player_1 and writes the output to the field array.
+     * The function is in a while loop so that the correct input must be given.
+     */
     void Game::turnPlayer_1()
     {
         while(1) // Player_1 turn
@@ -199,8 +203,17 @@ namespace TicTacToeSemKirkels
         }
     }
     
+    /*
+     * This function calls the logic for player_2 and writes the output to the field array.
+     * The function is in a while loop so that the correct input must be given.
+     */
     void Game::turnPlayer_2()
     {
+        /*
+         * If statement to print the turn for the cpu
+         * This is needed because in some cases CPU will randomly select a position if this position is already occupied it has to select again.
+         * The terminal can be spammed when the CPU is selecting so the CPU print line must be out of the while loop.
+         */
         if(player_2->getName() == "CPU")
         {
             std::cout << player_2->getName() << " Place your symbol: ";
@@ -326,6 +339,9 @@ namespace TicTacToeSemKirkels
         delete player_2;
     }
     
+    /*
+     * Game destructor
+     */
     Game::~Game()
     {
         std::cout << "Game Ended!" << std::endl;

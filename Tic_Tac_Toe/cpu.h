@@ -18,13 +18,13 @@ namespace TicTacToeSemKirkels
             void getPlayerSymbol();
             ~CPU();
         protected:
-            char grid[9];
+            char grid[9];                                       // Saves the contents of the field.
             TicTacToeSemKirkels::Field *field;
         private:
-            int turn = 0;
-            bool player_start = false;      // Boolean 3/4
-            bool player_can_win = false;    // Boolean 4/4
-            char playerSymbol;
+            int turn = 0;                                       // Counts the turn
+            bool player_start = false;      // Boolean 3/4      // Saves if the human player is starting
+            bool player_can_win = false;    // Boolean 4/4      // Saves if the human player has a win opportunity
+            char playerSymbol;                                  // Saves the symbol of the opponent
     };
 }
 

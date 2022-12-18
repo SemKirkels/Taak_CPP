@@ -22,13 +22,13 @@ namespace TicTacToeSemKirkels
             void setNames_PvC();        // Asks and sets the name in PvC
             void setSymbol_PvP();       // Asks and sets the symbols for each player in PvP
             void setSymbol_PvC();       // Asks and sets the symbol for the player in PvC
-            void turnPlayer_1();
-            void turnPlayer_2();
+            void turnPlayer_1();        // Activates the logic for player 1
+            void turnPlayer_2();        // Activates the logic for player 2
             void runGame();             // Runs the game and calls each function
             ~Game();
         protected:
-            Player *player_1, *player_2; // Object Composition
-            Field field;
+            Player *player_1, *player_2; // Object Composition  // Creates two objects: Player_1 and Player_2
+            Field field;                                        // Creates the field
     };
 }
 

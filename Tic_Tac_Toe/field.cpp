@@ -2,11 +2,17 @@
 
 namespace TicTacToeSemKirkels
 {
+    /*
+     * Field constructor
+     */
     Field::Field()
     {
 
     }
 
+    /*
+     * This function draws the field options so that the user knows which number corresponds with each box.
+     */
     void Field::drawFieldOptions()
     {
         std::cout << std::endl;
@@ -18,6 +24,9 @@ namespace TicTacToeSemKirkels
         std::cout << std::endl;
     }
 
+    /*
+     * This function prints the actual field and uses the placed symbols from the array symbols.
+     */
     void Field::drawField()
     {
         std::cout << std::endl;
@@ -28,6 +37,9 @@ namespace TicTacToeSemKirkels
         std::cout << symbols[6] << "|" << symbols[7] << "|" << symbols[8] << std::endl;
     }
 
+    /*
+     *This function checks if a player won.
+     */
     int Field::checkWin(Player *player_1, Player *player_2)
     {
         // Check Horizontal
@@ -58,22 +70,23 @@ namespace TicTacToeSemKirkels
             }
         }
 
-        // Check Diagonal
+        // Check Diagonal 1 player_1
         if(player_1->getSymbol() == symbols[0] && player_1->getSymbol() == symbols[4] && player_1->getSymbol() == symbols[8]) // Diagonal 1 Player 1
         {
             win_player_1 = true;
         }
-
+        // Check Diagonal 1 player_2
         if(player_2->getSymbol() == symbols[0] && player_2->getSymbol() == symbols[4] && player_2->getSymbol() == symbols[8]) // Diagonal 1 Player 2
         {
             win_player_2 = true;
         }
 
+        // Check Diagonal 2 player_1
         if(player_1->getSymbol() == symbols[6] && player_1->getSymbol() == symbols[4] && player_1->getSymbol() == symbols[2]) // Diagonal 2 Player 1
         {
             win_player_1 = true;
         }
-
+        // Check Diagonal 2 player_2
         if(player_2->getSymbol() == symbols[6] && player_2->getSymbol() == symbols[4] && player_2->getSymbol() == symbols[2]) // Diagonal 2 Player 2
         {
             win_player_2 = true;
@@ -94,6 +107,9 @@ namespace TicTacToeSemKirkels
         }
     }
 
+    /*
+     * Field destructor
+     */
     Field::~Field()
     {
 

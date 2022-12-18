@@ -9,7 +9,7 @@ namespace TicTacToeSemKirkels
     {
         public:
             LocalPlayer();
-            int placeSymbol(void);
+            int placeSymbol(void);      // Stores the logic for local player
             ~LocalPlayer();
     };
 }
