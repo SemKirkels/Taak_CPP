@@ -45,7 +45,9 @@ You can now play the game as indicated in the [README.md][Link Readme]
 ## G++ using the included scripts
 
 ### Windows:
-Move to the folder /Run_Scripts/Windows and double click the "G++_Compile_and_Run.bat" file. This will compile and run the game.  
+Move to the folder /Run_Scripts/Windows and open the "G++_Compile_and_Run.bat" file with a terminal.  
+``` G++_Compile_and_Run.bat ```   
+This will compile and run the game.  
 
 ### Linux:
 Move to the folder /Run_Scripts/Linux and execute the following command:  
@@ -61,7 +63,7 @@ The last way to run the project is via a docker container. The supported platfor
 > ARM V7  
 > ARM64  
 
-Assuming that docker is already installed on your target device all you have to do is pull the container and run the container using 2 commands.  
+Assuming that docker is already installed and opened on your target device all you have to do is pull the container and run the container using a few commands.  
   
 ### Windows:  
 Start docker desktop if you haven't already.  
@@ -84,10 +86,12 @@ The last way to run the project is via a docker container. The supported platfor
 > ARM V7  
 > ARM64  
 
-Assuming that docker is already installed on your target device all you have to do is pull the container and run the container using 2 commands.  
+Assuming that docker is already installed and opened on your target device all you have to do is pull the container and run the container using a few commands.  
 
-### Windows
-Move to the folder /Run_Scripts/Windows and double click the "Docker_Pull_and_Run.bat" file. This will pull and run the docker container.
+### Windows 
+Move to the folder /Run_Scripts/Windows and open the "Docker_Pull_and_Run.bat" file with a terminal.  
+``` Docker_Pull_and_Run.bat ```   
+This will pull and run the docker container.
 
 ### Linux
 Move to the folder /Run_Scripts/Linux and execute the following command:  
