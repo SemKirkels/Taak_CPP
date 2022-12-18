@@ -35,5 +35,5 @@ Figure 4: Game screen
 ### Errors in the game
 The game will end when invalid userinput is given. This can be a wrong number or letter. The programme can be restarted when this has occurred.
 
-[Link Checklist]: https://github.com/SemKirkels/Tic_Tac_Toe_CPP/blob/main/Checklist.md
-[Link Buildmanual]: https://github.com/SemKirkels/Tic_Tac_Toe_CPP/blob/main/BuildManual.md
+[Link Checklist]: https://github.com/SemKirkels/Tic_Tac_Toe_CPP/blob/main/Doc/Checklist.md
+[Link Buildmanual]: https://github.com/SemKirkels/Tic_Tac_Toe_CPP/blob/main/Doc/BuildManual.md
