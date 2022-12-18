@@ -8,7 +8,7 @@ You should see a screen as shown in the image below.
 
 ![Opening Qt Creator](./Pictures/OpeningQtCreator.png)  
 Figure 1: Opening Qt creator
-
+  
 When you see this screen, click "Open project" (In the top left corner). A new window of "Windows Explorer" should open. Now use this window to navigate to the Tic_Tac_Toe folder you have just downloaded. In this folder, you will see a file named: "Tic_Tac_Toe.pro" select this file.
 
 A new window should open in Qt creator. In this window, select "Configure Project" (bottom right). The project should open up.
@@ -49,7 +49,7 @@ Move to the folder /Run_Scripts/Windows and double click the "G++_Compile_and_Ru
 
 ### Linux:
 Move to the folder /Run_Scripts/Linux and execute the following command:  
-``` chmod +x G++_Compile_and_Run.sh ```
+``` chmod +x G++_Compile_and_Run.sh ```  
 When that is finished execute the "G++_Compile_and_Run.sh" file using the following command:  
 ``` ./G++_Compile_and_Run.sh ```  
 
