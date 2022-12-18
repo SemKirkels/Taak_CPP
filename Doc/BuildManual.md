@@ -23,7 +23,7 @@ To start the program, click on "Edit" (left side) in Qt creator. Finally, click 
 ![Qt run game](./Pictures/RunProjectQt.png)  
 Figure 3: Run the program
   
-You can now play the game as indicated in the ["README.md"][Link Readme]
+You can now play the game as indicated in the ["README.md"][Link Readme]  
   
 ## G++
 To run the program without Qt or Docker you can use the GNU compiler. Assuming you already have it installed and it is fully functional, you only need to enter a few commands to run the program.
@@ -42,6 +42,16 @@ Open a terminal in the "Tic_Tac_Toe" folder and run the following command depend
   
 You can now play the game as indicated in the ["README.md"][Link Readme]
 
+## G++ using the included scripts
+
+### Windows:
+Move to the folder /Run_Scripts/Windows and double click the "G++_Compile_and_Run.bat" file. This will compile and run the game.  
+
+### Linux:
+Move to the folder /Run_Scripts/Linux and execute the following command:  
+``` chmod +x G++_Compile_and_Run.sh ```
+When that is finished execute the "G++_Compile_and_Run.sh" file using the following command:  
+``` ./G++_Compile_and_Run.sh ```  
 
 ## Docker
 The last way to run the project is via a docker container. The supported platforms for this are:
@@ -83,5 +93,11 @@ Move to the folder /Run_Scripts/Linux and execute the following command:
 When that is finished execute the "Docker_Pull_and_Run.sh" file using the following command:  
 ``` ./Docker_Pull_and_Run.sh ```  
 This will pull and run the docker container.
+
+You can now play the game as indicated in the ["README.md"][Link Readme]
+
+
+
+
 
 [Link Readme]: https://github.com/SemKirkels/Tic_Tac_Toe_CPP/blob/main/README.md
