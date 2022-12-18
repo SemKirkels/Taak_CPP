@@ -32,11 +32,13 @@ The first step is to download the project and unzip it to the desired location. 
 
 Open a terminal in the "Tic_Tac_Toe" folder and run the following command depending on your Operating system:
 
-Windows:    ``` g++ *.cpp -o Tic_Tac_Toe.exe ```    To compile the game.  
-            ``` Tic_Tac_Toe.exe ```                 To run the game.
+Windows:   
+``` g++ *.cpp -o Tic_Tac_Toe.exe ```    To compile the game.  
+``` Tic_Tac_Toe.exe ```                 To run the game.
 
-Linux:      ``` g++ *.cpp -o Tic_Tac_Toe ```        To compile the game.  
-            ``` ./Tic_Tac_Toe ```                   To run the game.
+Linux:  
+``` g++ *.cpp -o Tic_Tac_Toe ```        To compile the game.  
+``` ./Tic_Tac_Toe ```                   To run the game.
 
 ## Docker
 
