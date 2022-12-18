@@ -2,11 +2,11 @@
 
 ## The assignment
 This game is written in C++ as an assignment for the C++ course.
-The requirements the assignment has to meet are in the ["Checklist.md"][Link Checklist] file.
+The requirements the assignment has to meet are in the [Checklist.md][Link Checklist] file.
 
 ## Build manual
 The game can be run via a Docker container or on a local machine.
-The exact instructions for installation can be found in the ["BuildManual.md"][Link Buildmanual] file.
+The exact instructions for installation can be found in the [BuildManual.md][Link Buildmanual] file.
 
 ## How does the game work
 1. When the game starts it wil ask for the game mode. Please enter the corresponding number and press enter to confirm.

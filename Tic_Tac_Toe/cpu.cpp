@@ -17,42 +17,180 @@ namespace TicTacToeSemKirkels
     {
         turn++;
         checkField();
+        int position = checkPlayerCanWin();
 
         if(turn == 1)
         {
             checkStartingPlayer();
+            getPlayerSymbol();
 
-            if(grid[0] == ' ')
+            if(player_start == false) // Cpu starts in offensive mode
             {
-                return 1;
+                if(grid[0] == ' ')
+                {
+                    return 1;
+                }
+                else if(grid[2] == ' ')
+                {
+                    return 3;
+                }
+                else
+                {
+                    return (rand() % 9);
+                }
             }
-            else if(grid[2] == ' ')
+            else // Cpu starts in defensive mode
             {
-                return 3;
-            }
-            else
-            {
-                return (rand() % 9);
+                if(position == 10) // if there is no win condition for player use default strategy
+                {
+                    if(grid[0] == ' ')
+                    {
+                        return 1;
+                    }
+                    else if(grid[2] == ' ')
+                    {
+                        return 3;
+                    }
+                    else
+                    {
+                        return (rand() % 9);
+                    }
+                }
+                else
+                {
+                    return position;
+                }
             }
         }
 
         if(turn == 2)
         {
-            if(grid[0] == symbol)
+            if(player_start == false) // Cpu starts in offensive mode
             {
-                return 9;
+                if(grid[0] == symbol)
+                {
+                    return 9;
+                }
+                else if(grid[6] == ' ')
+                {
+                    return 7;
+                }
+                else
+                {
+                    return (rand() % 9);
+                }
             }
-            else if(grid[6] == ' ')
+            else // Cpu starts in defensive mode
             {
-                return 7;
-            }
-            else
-            {
-                return (rand() % 9);
+                if(position == 10) // if there is no win condition for player use default strategy
+                {
+                    if(grid[0] == symbol)
+                    {
+                        return 9;
+                    }
+                    else if(grid[6] == ' ')
+                    {
+                        return 7;
+                    }
+                    else
+                    {
+                        return (rand() % 9);
+                    }
+                }
+                else
+                {
+                    return position;
+                }
             }
         }
 
-        // Check for oponent win conditions
+        if(turn == 3)
+        {
+            if(player_start == false) // Cpu starts in offensive mode
+            {
+                if(grid[0] == symbol && grid[8] == symbol)
+                {
+                    if(grid[4] == ' ')
+                    {
+                        return 5;
+                    }
+                    else
+                    {
+                        return 7;
+                    }
+                }
+            }
+            else // Cpu starts in defensive mode
+            {
+                if(position == 10) // if there is no win condition for player use default strategy
+                {
+                    if(grid[0] == symbol && grid[8] == symbol)
+                    {
+                        if(grid[4] == ' ')
+                        {
+                            return 5;
+                        }
+                        else
+                        {
+                            return 7;
+                        }
+                    }
+                }
+                else
+                {
+                    return position;
+                }
+            }
+        }
+
+        if(turn == 4)
+        {
+            if(player_start == false) // Cpu starts in offensive mode
+            {
+                if(grid[4] == ' ')
+                {
+                    return 5;
+                }
+                else if(grid[3] == ' ')
+                {
+                    return 4;
+                }
+                else if(grid[7] == ' ')
+                {
+                    return 8;
+                }
+                else
+                {
+                    return 6;
+                }
+            }
+            else // Cpu starts in defensive mode
+            {
+                if(position == 10) // if there is no win condition for player use default strategy
+                {
+                    if(grid[4] == ' ')
+                    {
+                        return 5;
+                    }
+                    else if(grid[3] == ' ')
+                    {
+                        return 4;
+                    }
+                    else if(grid[7] == ' ')
+                    {
+                        return 8;
+                    }
+                    else
+                    {
+                        return 6;
+                    }
+                }
+                else
+                {
+                    return position;
+                }
+            }
+        }
 
         return (rand() % 9);
     }
@@ -74,23 +212,183 @@ namespace TicTacToeSemKirkels
     */
     void CPU::checkStartingPlayer()
     {
+        int empty_boxes = 0;
+
         for(int i = 0; i < 9; i++)
         {
-            int empty_boxes = 0;
 
             if(grid[i] == ' ')
             {
                 empty_boxes++;
             }
+        }
 
-            if(empty_boxes == 8)
+        if(empty_boxes == 9)
+        {
+            player_start = false;
+        }
+        else
+        {
+            player_start = true;
+        }
+    }
+
+    /*
+     * This function checks if the opponent can win and returns the value that CPU has to use to block the win
+     */
+    int CPU::checkPlayerCanWin()
+    {
+        /*
+         * This for loop check horizontal win opportunities for player_1
+         * it first checks horizontal row 1 than row 2 and finally row 3
+         * the first if statment checks for:
+         *      x|x|.
+         * the second if statement checks for:
+         *      .|x|x
+         * the third if statement checks for:
+         *      x|.|x
+         */
+        for(int i = 0; i < 9; i += 3)
+        {
+            if(grid[i] == playerSymbol && grid[i + 1] == playerSymbol)
             {
-                player_start = false;
+                return i + 3;
+            }
+            else if(grid[i + 1] == playerSymbol && grid[i + 2] == playerSymbol)
+            {
+                return i + 1;
+            }
+            else if(grid[i] == playerSymbol && grid[i + 2] == playerSymbol)
+            {
+                return i + 2;
             }
             else
             {
-                player_start = true;
+                player_can_win = false;
             }
+        }
+
+        /*
+         * This for loop check the vertical win opportunities for player_1
+         * if first check col 1 than col 2 and finally col 3
+         * the first if statment checks for:
+         * x|.|.
+         * x|.|.
+         * .|.|.
+         * the second if statment checks for:
+         * .|.|.
+         * x|.|.
+         * x|.|.
+         * the second if statment checks for:
+         * x|.|.
+         * .|.|.
+         * x|.|.
+         */
+        for(int i = 0; i < 3; i++)
+        {
+            if(grid[i] == playerSymbol && grid[i + 3] == playerSymbol)
+            {
+                return i + 7;
+            }
+            else if(grid[i + 3] == playerSymbol && grid[i + 6] == playerSymbol)
+            {
+                return i + 1;
+            }
+            else if(grid[i] == playerSymbol && grid[i + 6] == playerSymbol)
+            {
+                return i + 4;
+            }
+            else
+            {
+                player_can_win = false;
+            }
+        }
+
+
+        /*
+         * This if statement check for diagonal win opportunities for player_1
+         * the first if statment checks for;
+         * x|.|.
+         * .|x|.
+         * .|.|.
+         * the second if statment checks for;
+         * .|.|.
+         * .|x|.
+         * .|.|x
+         * the third if statment checks for;
+         * x|.|.
+         * .|.|.
+         * .|.|x
+         */
+        if(grid[0] == playerSymbol && grid[4] == playerSymbol)
+        {
+            return 9;
+        }
+        else if(grid[4] == playerSymbol && grid[8] == playerSymbol)
+        {
+            return 1;
+        }
+        else if(grid[0] == playerSymbol && grid[8] == playerSymbol)
+        {
+            return 5;
+        }
+        else
+        {
+            player_can_win = false;
+        }
+
+        /*
+         * This if statement check for diagonal win opportunities for player_1
+         * the first if statment checks for;
+         * .|.|x
+         * .|x|.
+         * .|.|.
+         * the second if statment checks for;
+         * .|.|.
+         * .|x|.
+         * x|.|.
+         * the third if statment checks for;
+         * .|.|x
+         * .|.|.
+         * x|.|.
+         */
+        if(grid[2] == playerSymbol && grid[4] == playerSymbol)
+        {
+            return 7;
+        }
+        else if(grid[4] == playerSymbol && grid[6] == playerSymbol)
+        {
+            return 3;
+        }
+        else if(grid[2] == playerSymbol && grid[6] == playerSymbol)
+        {
+            return 5;
+        }
+        else
+        {
+            player_can_win = false;
+        }
+
+        if(player_can_win == false)
+        {
+            return 10; // return 10 means that there is no win condition for the player
+        }
+
+        return (rand() % 9);
+    }
+
+    /*
+     * Gets the symbol of the oponent and writes it to playerSymbol.
+     */
+    void CPU::getPlayerSymbol()
+    {
+        if(symbol == 'x')
+        {
+            playerSymbol = 'o';
+        }
+        else
+        {
+            playerSymbol = 'x';
         }
     }
 

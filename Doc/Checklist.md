@@ -48,7 +48,7 @@
 - [ ]   2 useful unsigned chars or other better usage of memory efficient type
 - [ ]   at least 4 useful const references for variables
 - [ ]   at least 4 useful const references for functions
-- [ ]   at least 4 useful bool
+- [x]   at least 4 useful bool
 - [x]   dynamic memory allocation (new)
 - [x]   dynamic memory removing (delete)
 - [ ]   2 useful (modern) call-by-references
@@ -70,5 +70,5 @@
 - [ ]   usage of a GUI
 - [ ]   usage of OpenGL or other 3D engine
 - [ ]   useful usage of an external library (not Qt)
-- [ ]   project that works with hardware
-- [ ]   a nice extra that you think that should deserve grading (stuff you put time in and is not rewarded by an item above)
+- [x]   project that works with hardware
+- [x]   a nice extra that you think that should deserve grading (stuff you put time in and is not rewarded by an item above)

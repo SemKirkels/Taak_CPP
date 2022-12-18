@@ -84,7 +84,7 @@ namespace TicTacToeSemKirkels
         {
             return 1;
         }
-        else if(win_player_2 == true && win_player_2 == false)
+        else if(win_player_2 == true && win_player_1 == false)
         {
             return 2;
         }

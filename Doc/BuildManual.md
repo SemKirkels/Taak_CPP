@@ -23,7 +23,7 @@ To start the program, click on "Edit" (left side) in Qt creator. Finally, click 
 ![Qt run game](./Pictures/RunProjectQt.png)  
 Figure 3: Run the program
   
-You can now play the game as indicated in the ["README.md"][Link Readme]  
+You can now play the game as indicated in the [README.md][Link Readme]  
   
 ## G++
 To run the program without Qt or Docker you can use the GNU compiler. Assuming you already have it installed and it is fully functional, you only need to enter a few commands to run the program.
@@ -40,7 +40,7 @@ Open a terminal in the "Tic_Tac_Toe" folder and run the following command depend
 ``` g++ *.cpp -o Tic_Tac_Toe ```        To compile the game.  
 ``` ./Tic_Tac_Toe ```                   To run the game.  
   
-You can now play the game as indicated in the ["README.md"][Link Readme]
+You can now play the game as indicated in the [README.md][Link Readme]
 
 ## G++ using the included scripts
 
@@ -52,6 +52,8 @@ Move to the folder /Run_Scripts/Linux and execute the following command:
 ``` chmod +x G++_Compile_and_Run.sh ```
 When that is finished execute the "G++_Compile_and_Run.sh" file using the following command:  
 ``` ./G++_Compile_and_Run.sh ```  
+
+You can now play the game as indicated in the [README.md][Link Readme]
 
 ## Docker
 The last way to run the project is via a docker container. The supported platforms for this are:
@@ -74,7 +76,7 @@ Run the following command to download the image:
 When this is finished execute the following command to run the image.  
 ``` sudo docker run -it ghcr.io/semkirkels/taak_cpp ```
   
-You can now play the game as indicated in the ["README.md"][Link Readme]
+You can now play the game as indicated in the [README.md][Link Readme]
 
 ## Docker using the included scripts
 The last way to run the project is via a docker container. The supported platforms for this are:
@@ -94,7 +96,7 @@ When that is finished execute the "Docker_Pull_and_Run.sh" file using the follow
 ``` ./Docker_Pull_and_Run.sh ```  
 This will pull and run the docker container.
 
-You can now play the game as indicated in the ["README.md"][Link Readme]
+You can now play the game as indicated in the [README.md][Link Readme]
 
 
 

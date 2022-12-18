@@ -201,11 +201,18 @@ namespace TicTacToeSemKirkels
     
     void Game::turnPlayer_2()
     {
+        if(player_2->getName() == "CPU")
+        {
+            std::cout << player_2->getName() << " Place your symbol: ";
+        }
+
         while(1) // Player_2 turn
         {
             int temp;
-    
-            std::cout << player_2->getName() << " Place your symbol: ";
+            if(player_2->getName() != "CPU")
+            {
+                std::cout << player_2->getName() << " Place your symbol: ";
+            }
     
             temp = player_2->placeSymbol() - 1;
             if(field.getSymbols(temp) == ' ')

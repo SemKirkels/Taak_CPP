@@ -20,8 +20,8 @@ namespace TicTacToeSemKirkels
             ~Field();
         protected:
             char symbols[9] = {' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '};
-            bool win_player_1 = false;
-            bool win_player_2 = false;
+            bool win_player_1 = false; // Boolean 1/4
+            bool win_player_2 = false; // Boolena 2/4
     };
 }
 
