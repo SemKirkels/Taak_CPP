@@ -45,9 +45,9 @@ You can now play the game as indicated in the ["README.md"][Link Readme]
 
 ## Docker
 The last way to run the project is via a docker container. The supported platforms for this are:
-> AMD64 / x86
-> ARM V7
-> ARM64
+> AMD64 / x86  
+> ARM V7  
+> ARM64  
 
 Assuming that docker is already installed on your target device all you have to do is pull the container and run the container using 2 commands.  
   
