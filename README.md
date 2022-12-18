@@ -12,25 +12,25 @@ The exact instructions for installation can be found in the ["BuildManual.md"][L
 1. When the game starts it wil ask for the game mode. Please enter the corresponding number and press enter to confirm.
 
 ![Startscreen](./Pictures/Startscreen.png)\
-Figure 1: Startscreen\
+Figure 1: Startscreen
 
 
 2. After that it will ask each player to enter their name.
 
 ![Name screen](./Pictures/EnterNames.png)\
-Figure 2: Enter names\
+Figure 2: Enter names
 
 
 3. Than the program will randomly choose wich player may start selecting their symbol. This can either be 'x' or 'o' but must be lower case. The other player will receive the remaining symbol.
 
 ![Name screen](./Pictures/EnterNames.png)\
-Figure 3: Enter names\
+Figure 3: Enter names
 
 
 4. Finally the program will select a random player to start. Players can then take turns choosing a square to place the symbol on the field. When a player has won, this will be stated in the terminal and the game will end. A draw will end the game and state "draw" in the terminal.
 
 ![Game screen](./Pictures/Gamescreen.png)\
-Figure 4: Game screen\
+Figure 4: Game screen
 
 ### Errors in the game
 The game will end when invalid userinput is given. This can be a wrong number or letter. The programme can be restarted when this has occurred.
