@@ -75,9 +75,13 @@ The last way to run the project is via a docker container. The supported platfor
 Assuming that docker is already installed on your target device all you have to do is pull the container and run the container using 2 commands.  
 
 ### Windows
-Move to the folder /Run_Scripts/Windows and execute the "Docker_Pull_and_Run.bat" file. This will pull and run the docker container.
+Move to the folder /Run_Scripts/Windows and double click the "Docker_Pull_and_Run.bat" file. This will pull and run the docker container.
 
 ### Linux
-Move to the folder /Run_Scripts/Linux and execute the "Docker_Pull_and_Run.sh" file. This will pull and run the docker container.
+Move to the folder /Run_Scripts/Linux and execute the following command:  
+``` chmod +x Docker_Pull_and_Run.sh ```
+When that is finished execute the "Docker_Pull_and_Run.sh" file using the following command:  
+``` ./Docker_Pull_and_Run.sh ```  
+This will pull and run the docker container.
 
 [Link Readme]: https://github.com/SemKirkels/Tic_Tac_Toe_CPP/blob/main/README.md
