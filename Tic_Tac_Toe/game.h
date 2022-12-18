@@ -7,6 +7,7 @@
 #include "localplayer.h"
 #include "field.h"
 #include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
