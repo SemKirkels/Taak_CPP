@@ -55,21 +55,29 @@ Assuming that docker is already installed on your target device all you have to 
 Start docker desktop if you haven't already.  
 To pull the container run these commands depending on your operating system:  
 ``` docker pull ghcr.io/semkirkels/taak_cpp:latest ```  
-When this is finished navigate to images in docker. Execute the next command:  
-``` docker run -it IMAGE ID ``` repleace IMAGE ID with the image id found in docker desktop.  
-
-![Docker Images](./Pictures/DockerRunImage.png)  
-Figure 3: Docker Image list  
+When this is finished execute the next command:  
+``` docker run -it ghcr.io/semkirkels/taak_cpp ```
 
 ### Linux:  
 Run the following command to download the image:  
 ``` sudo docker pull ghcr.io/semkirkels/taak_cpp:latest ```
-When this is finished execute the following command to get the image id:  
-``` sudo docker image ls ```  
-find the corresponding image id for the image you are trying to execute (ghcr.io/semkirkels/taak_cpp).  
-Now that you got the image id execute the following command to run the game:  
-``` sudo docker run -it IMAGE ID ```
+When this is finished execute the following command to run the image.  
+``` sudo docker run -it ghcr.io/semkirkels/taak_cpp ```
   
 You can now play the game as indicated in the ["README.md"][Link Readme]
+
+## Docker using the included scripts
+The last way to run the project is via a docker container. The supported platforms for this are:
+> AMD64 / x86  
+> ARM V7  
+> ARM64  
+
+Assuming that docker is already installed on your target device all you have to do is pull the container and run the container using 2 commands.  
+
+### Windows
+Move to the folder /Run_Scripts/Windows and execute the "Docker_Pull_and_Run.bat" file. This will pull and run the docker container.
+
+### Linux
+Move to the folder /Run_Scripts/Linux and execute the "Docker_Pull_and_Run.sh" file. This will pull and run the docker container.
 
 [Link Readme]: https://github.com/SemKirkels/Tic_Tac_Toe_CPP/blob/main/README.md

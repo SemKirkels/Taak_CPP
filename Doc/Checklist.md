@@ -22,7 +22,7 @@
 - [x]   fully working project
 - [x]   sufficient git commits (+/- weekly)
 - [x]   correct files on git
-- [ ]   working build manual as readme on GitHub (project must be possible to build from scratch on a clean PC)
+- [x]   working build manual as readme on GitHub (project must be possible to build from scratch on a clean PC)
 
 ## OOP
 
