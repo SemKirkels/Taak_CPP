@@ -39,6 +39,7 @@ Windows:
 Linux:  
 ``` g++ *.cpp -o Tic_Tac_Toe ```        To compile the game.  
 ``` ./Tic_Tac_Toe ```                   To run the game.  
+  
 You can now play the game as indicated in the ["README.md"][Link Readme]
 
 
