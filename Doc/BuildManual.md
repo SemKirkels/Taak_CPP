@@ -44,6 +44,32 @@ You can now play the game as indicated in the ["README.md"][Link Readme]
 
 
 ## Docker
+The last way to run the project is via a docker container. The supported platforms for this are:
+> AMD64 / x86
+> ARM V7
+> ARM64
 
+Assuming that docker is already installed on your target device all you have to do is pull the container and run the container using 2 commands.  
+  
+Windows:  
+Start docker desktop if you haven't already.  
+To pull the container run these commands depending on your operating system:  
+``` docker pull ghcr.io/semkirkels/taak_cpp:latest ```  
+When this is finished navigate to images in docker. Execute the next command:  
+``` docker run -it IMAGE ID ``` repleace IMAGE ID with the image id found in docker desktop.  
+
+![Docker Images](./Pictures/DockerRunImage.png)  
+Figure 3: Docker Image list  
+
+Linux:  
+Run the following command to download the image:  
+``` sudo docker pull ghcr.io/semkirkels/taak_cpp:latest ```
+When this is finished execute the following command to get the image id:  
+``` sudo docker image ls ```  
+find the corresponding image id for the image you are trying to execute (ghcr.io/semkirkels/taak_cpp).  
+Now that you got the image id execute the following command to run the game:  
+``` sudo docker run -it IMAGE ID ```
+  
+You can now play the game as indicated in the ["README.md"][Link Readme]
 
 [Link Readme]: https://github.com/SemKirkels/Tic_Tac_Toe_CPP/blob/main/README.md
