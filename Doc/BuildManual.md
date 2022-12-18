@@ -72,7 +72,7 @@ When this is finished execute the next command:
 
 ### Linux:  
 Run the following command to download the image:  
-``` sudo docker pull ghcr.io/semkirkels/taak_cpp:latest ```
+``` sudo docker pull ghcr.io/semkirkels/taak_cpp:latest ```  
 When this is finished execute the following command to run the image.  
 ``` sudo docker run -it ghcr.io/semkirkels/taak_cpp ```
   
