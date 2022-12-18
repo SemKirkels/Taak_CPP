@@ -32,11 +32,11 @@ The first step is to download the project and unzip it to the desired location. 
 
 Open a terminal in the "Tic_Tac_Toe" folder and run the following command depending on your Operating system:
 
-Windows:   
+### Windows:   
 ``` g++ *.cpp -o Tic_Tac_Toe.exe ```    To compile the game.  
 ``` Tic_Tac_Toe.exe ```                 To run the game.
 
-Linux:  
+### Linux:  
 ``` g++ *.cpp -o Tic_Tac_Toe ```        To compile the game.  
 ``` ./Tic_Tac_Toe ```                   To run the game.  
   
@@ -51,7 +51,7 @@ The last way to run the project is via a docker container. The supported platfor
 
 Assuming that docker is already installed on your target device all you have to do is pull the container and run the container using 2 commands.  
   
-Windows:  
+### Windows:  
 Start docker desktop if you haven't already.  
 To pull the container run these commands depending on your operating system:  
 ``` docker pull ghcr.io/semkirkels/taak_cpp:latest ```  
@@ -61,7 +61,7 @@ When this is finished navigate to images in docker. Execute the next command:
 ![Docker Images](./Pictures/DockerRunImage.png)  
 Figure 3: Docker Image list  
 
-Linux:  
+### Linux:  
 Run the following command to download the image:  
 ``` sudo docker pull ghcr.io/semkirkels/taak_cpp:latest ```
 When this is finished execute the following command to get the image id:  
